@@ -1,0 +1,87 @@
+JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_40" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "thisMousePopup", true ) )
+			addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "thisMousePopup", true ) )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 370, 265 )
+		} )
+		add( new FormComponent( "org.jdesktop.swingx.JXBusyLabel" ) {
+			name: "busyLabel"
+			"text": "Загрузка схемы..."
+			"horizontalAlignment": 0
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 310 )
+			"size": new java.awt.Dimension( 370, 26 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "svgLabel"
+			"horizontalAlignment": 0
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 360 )
+			"size": new java.awt.Dimension( 370, 20 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "errorLabel"
+			"text": "Ошибка"
+			"horizontalAlignment": 0
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 395 )
+			"size": new java.awt.Dimension( 365, 25 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "verLabel"
+			"text": "Версия схемы:"
+			"horizontalAlignment": 2
+			"font": new com.jformdesigner.model.SwingDerivedFont( null, 65538, -1, false )
+			"verticalAlignment": 3
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 430 )
+			"size": new java.awt.Dimension( 365, 25 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "sizeLabel"
+			"text": "размер:"
+			"font": new com.jformdesigner.model.SwingDerivedFont( null, 65538, -1, false )
+			"horizontalAlignment": 4
+			"verticalAlignment": 3
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 465 )
+			"size": new java.awt.Dimension( 365, 25 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "popupMenu"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "pngMenuItem"
+				"text": "Экспорт в png"
+				"enabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "pngMenuItemActionPerformed", false ) )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "svgMenuItem"
+				"text": "Экспорт в svg"
+				"enabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "svgMenuItemActionPerformed", false ) )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "svgzMenuItem"
+				"text": "Экспорт в svgz"
+				"enabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "svgzMenuItemActionPerformed", false ) )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "xmlMenuItem"
+				"text": "Экспорт в xml"
+				"enabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "xmlMenuItemActionPerformed", false ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 410, 10 )
+		} )
+	}
+}

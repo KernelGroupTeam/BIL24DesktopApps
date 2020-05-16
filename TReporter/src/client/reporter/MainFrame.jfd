@@ -1,0 +1,432 @@
+JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_40" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"$locationPolicy": 2
+			"$sizePolicy": 2
+			"title": "Отчеты платформы BIL24 версия "
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "setIconImages(Env.frameIcons);"
+			}
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0:1.0"
+				"$rowSpecs": "0, 0, 0, 0:1.0"
+				"$hGap": 5
+				"$vGap": 5
+				"$alignLeft": true
+				"$alignTop": true
+			} ) {
+				name: "mainPanel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0, 0, 0, 0"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$vGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "panel1"
+					"border": new javax.swing.border.EmptyBorder( 5, 5, 0, 5 )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "acquiringComboBox"
+						"maximumRowCount": 18
+						"excludeFirstItem": true
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "AcquiringObj"
+						}
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "organizerComboBox"
+						"maximumRowCount": 18
+						"excludeFirstItem": true
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "ROrganizer"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "organizerComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "agentComboBox"
+						"excludeFirstItem": true
+						"maximumRowCount": 18
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "RAgent"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "agentComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+					} )
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "frontendComboBox"
+						"excludeFirstItem": true
+						"maximumRowCount": 18
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "RFrontend"
+						}
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 3
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0, 0, 0, 0, 0, 0"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+					"$vGap": 5
+				} ) {
+					name: "panel2"
+					"border": new javax.swing.border.EmptyBorder( 0, 5, 0, 5 )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "cityComboBox"
+						"maximumRowCount": 18
+						"excludeFirstItem": true
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "RCity"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "cityComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "venueComboBox"
+						"maximumRowCount": 18
+						"excludeFirstItem": true
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "RVenue"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "venueComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "actualCheckBox"
+						"text": "актуальные:"
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "actualCheckBoxItemStateChanged", false ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+					} )
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "actionComboBox"
+						"maximumRowCount": 18
+						"excludeFirstItem": true
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "RAction"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "actionComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 3
+					} )
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "actionEventComboBox"
+						"maximumRowCount": 18
+						"excludeFirstItem": true
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "RActionEvent"
+							"JavaCodeGenerator.postInitCode": "${field}.setPrototypeDisplayValue(new RActionEvent(0, 0, \"88.88.8888 88:88\"));"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "actionEventComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 4
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "fullCheckBox"
+						"text": "все продажи"
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "fullCheckBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 5
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$vGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "panel3"
+					"border": new javax.swing.border.EmptyBorder( 0, 5, 0, 5 )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "gSystemComboBox"
+						"maximumRowCount": 18
+						"excludeFirstItem": true
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "GSystemObj"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "gSystemComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormComponent( "client.component.suggestion.SuggestionComboBox" ) {
+						name: "gatewayComboBox"
+						"excludeFirstItem": true
+						"maximumRowCount": 18
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "GatewayObj"
+						}
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "periodLabel"
+						"text": "Период"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "periodTypeComboBox"
+						auxiliary() {
+							"JavaCodeGenerator.typeParameters": "PeriodType"
+							"JavaCodeGenerator.postInitCode": "${field}.addItem(PeriodType.SALES);\n${field}.addItem(PeriodType.SHOWS);"
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "periodTypeComboBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 3
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "fromLabel"
+						"text": "с"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 4
+					} )
+					add( new FormComponent( "org.jdesktop.swingx.JXDatePicker" ) {
+						name: "fromDatePicker"
+						auxiliary() {
+							"JavaCodeGenerator.postInitCode": "${field}.setFormats(\"EEE dd.MM.yyyy\");"
+							"JavaCodeGenerator.customCreateCode": "new JXDatePicker(new Date());"
+						}
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 5
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "toLabel"
+						"text": "по"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 6
+					} )
+					add( new FormComponent( "org.jdesktop.swingx.JXDatePicker" ) {
+						name: "toDatePicker"
+						auxiliary() {
+							"JavaCodeGenerator.postInitCode": "${field}.setFormats(\"EEE dd.MM.yyyy\");"
+							"JavaCodeGenerator.customCreateCode": "new JXDatePicker(new Date());"
+						}
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 7
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "allStatusesCheckBox"
+						"text": "все статусы"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 8
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "lightRequestCheckBox"
+						"text": "только заказы"
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "lightRequestCheckBoxItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 9
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "getButton"
+						"text": "Получить"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "getButtonActionPerformed", false ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 10
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+				} )
+				add( new FormContainer( "javax.swing.JSplitPane", new FormLayoutManager( class javax.swing.JSplitPane ) ) {
+					name: "splitPane"
+					"orientation": 0
+					"resizeWeight": 0.7
+					"oneTouchExpandable": true
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "client.component.summary.JXSummaryTable" ) {
+							name: "orderTable"
+							"columnControlVisible": true
+							"horizontalScrollEnabled": true
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "orderTableMousePopup", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "orderTableMousePopup", true ) )
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "left"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "client.component.summary.JXSummaryTable" ) {
+							name: "ticketTable"
+							"columnControlVisible": true
+							"horizontalScrollEnabled": true
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "ticketTableMousePopup", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "ticketTableMousePopup", true ) )
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "right"
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 3
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormComponent( "client.reporter.component.StatusBarPanel" ) {
+				name: "statusBarPanel"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "reportsMenu"
+					"text": "Отчеты"
+					"enabled": false
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "distributionMenu"
+					"text": "Рассылка"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "reportMenuItem"
+						"text": "Отчеты"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "reportMenuItemActionPerformed", false ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "quotaMenu"
+					"text": "Квоты"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "invoiceMenuItem"
+						"text": "Накладные"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "invoiceMenuItemActionPerformed", false ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "quotaReportMenuItem"
+						"text": "Форма №9. Общий отчет по продажам"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "quotaReportMenuItemActionPerformed", false ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "mskdMenu"
+					"text": "МСКД"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "passMenuItem"
+						"text": "Проверка билетов"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "passMenuItemActionPerformed", false ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "mecMenuItem"
+						"text": "Валидации карт"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "mecMenuItemActionPerformed", false ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "cashierWorkShiftMenu"
+					"text": "Смены"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cashierWorkShiftMenuItem"
+						"text": "Список смен"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cashierWorkShiftMenuItemActionPerformed", false ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "statsMenu"
+					"text": "Статистика"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "queryStatsItem"
+						"text": "Запросы по протоколу"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "queryStatsItemActionPerformed", false ) )
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 990, 415 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "orderPopupMenu"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "orderMenuItem1"
+				"text": "Отправка заказа"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "orderMenuItem1ActionPerformed", false ) )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "orderMenuItem2"
+				"text": "Ручная отмена заказа"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "orderMenuItem2ActionPerformed", false ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 10, 440 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "ticketPopupMenu"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "ticketMenuItem1"
+				"text": "Возврат билета"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ticketMenuItem1ActionPerformed", false ) )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "ticketMenuItem2"
+				"text": "Экспорт билета"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ticketMenuItem2ActionPerformed", false ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 260, 440 )
+		} )
+	}
+}

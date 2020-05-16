@@ -1,0 +1,1316 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$locationPolicy": 2
+			"$sizePolicy": 2
+			"defaultCloseOperation": 0
+			"title": "Редактор платформы BIL24 версия "
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "setIconImages(Env.frameIcons);"
+			}
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "thisWindowClosing", false ) )
+			add( new FormComponent( "client.editor.component.StatusBarPanel" ) {
+				name: "statusBarPanel"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "645:1.0, 645:1.0"
+				"$rowSpecs": "0:1.0"
+				"$hGap": 15
+				"$alignLeft": true
+				"$alignTop": true
+				"$vGap": 5
+			} ) {
+				name: "mainPanel"
+				"border": new javax.swing.border.EmptyBorder( 5, 5, 1, 5 )
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0"
+					"$rowSpecs": "0, 0, 0, 0, 0, 0, 0:1.0, 0"
+					"$hGap": 5
+					"$vGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "panel1"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 100, 0, 0, 0, 0:1.0, 0"
+						"$rowSpecs": "0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "cityPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": "Город:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.component.OperationComboBox" ) {
+							name: "cityComboBox"
+							"maximumRowCount": 15
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "CityObj"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "addCityButton"
+							"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 0, "/resources/plus.png" )
+							"margin": &Insets0 new java.awt.Insets( 1, 1, 1, 1 )
+							"toolTipText": "Добавить город"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addCityButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "delCityButton"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/minus.png" )
+							"margin": #Insets0
+							"toolTipText": "Удалить город"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delCityButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label6"
+							"text": "Название:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "cityTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 5
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "saveCityButton"
+							"icon": &SwingIcon1 new com.jformdesigner.model.SwingIcon( 0, "/resources/save.png" )
+							"margin": &Insets1 new java.awt.Insets( 2, 2, 2, 2 )
+							"toolTipText": "Сохранить изменения"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveCityButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 6
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0, 0, 0, 0"
+						"$rowSpecs": "0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "venuePanel"
+						"border": new javax.swing.border.CompoundBorder( new javax.swing.border.MatteBorder( 1, 0, 0, 0, sfield java.awt.Color black ), new javax.swing.border.EmptyBorder( 10, 0, 0, 0 ) )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label9"
+							"text": "Место:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.component.OperationComboBox" ) {
+							name: "venueComboBox"
+							"minimumSize": new java.awt.Dimension( 0, 0 )
+							"maximumRowCount": 15
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "VenueObj"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "addVenueButton"
+							"icon": #SwingIcon0
+							"margin": &Insets2 new java.awt.Insets( 1, 1, 1, 1 )
+							"toolTipText": "Добавить место проведения"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addVenueButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "delVenueButton"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/minus.png" )
+							"margin": #Insets2
+							"toolTipText": "Удалить место проведения"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delVenueButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "saveVenueButton"
+							"icon": #SwingIcon1
+							"margin": #Insets1
+							"toolTipText": "Сохранить изменения"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveVenueButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+						"insets": new java.awt.Insets( 5, 0, 0, 0 )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0"
+						"$rowSpecs": "0, 0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "venueNamePanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label10"
+							"text": "Название:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "venueNameTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label11"
+							"text": "Адрес:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "addressTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+							"gridy": 1
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 2
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0, 0, 0, 0, 0, 0"
+						"$rowSpecs": "0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "venueGeoPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label28"
+							"text": "Тип:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "venueTypeComboBox"
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "VenueType"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label12"
+							"text": "Широта:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "latTextField"
+							"columns": 8
+							"minimumSize": new java.awt.Dimension( 30, 10 )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label13"
+							"text": "Долгота:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "lonTextField"
+							"columns": 8
+							"minimumSize": new java.awt.Dimension( 30, 10 )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 5
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "mapButton"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/map.png" )
+							"margin": new java.awt.Insets( 1, 1, 1, 1 )
+							"toolTipText": "Показать на карте"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "mapButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 6
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 3
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0:1.0, left:0"
+						"$rowSpecs": "0, 100"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "venueDescPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "venueDescLabel"
+							"text": "Описание:"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.editor.component.PosterLabel" ) {
+							name: "venueBigImageLabel"
+							"text": "<html><center>большой постер<br>640x670<br><br><small>перетащите файл<br>или<br>нажмите, чтобы выбрать</small></center></html>"
+							"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+							"horizontalAlignment": 0
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "imageLabelMouseClicked", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+							"gridheight": 2
+							"vAlign": 1
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane2"
+							"preferredSize": new java.awt.Dimension( 22, 22 )
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "venueDescTextArea"
+								"margin": new java.awt.Insets( 1, 3, 1, 3 )
+								"lineWrap": true
+								"wrapStyleWord": true
+								"font": new com.jformdesigner.model.SwingFont( "TextField.font" )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 4
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 100, 0, 0, 0, 0:1.0, 0"
+						"$rowSpecs": "0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "planPanel"
+						"border": new javax.swing.border.CompoundBorder( new javax.swing.border.MatteBorder( 1, 0, 0, 0, sfield java.awt.Color black ), new javax.swing.border.EmptyBorder( 10, 0, 0, 0 ) )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label22"
+							"text": "Схема зала:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.component.OperationComboBox" ) {
+							name: "planComboBox"
+							"maximumRowCount": 15
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "SeatingPlanObj"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "addPlanButton"
+							"icon": #SwingIcon0
+							"margin": #Insets0
+							"toolTipText": "Добавить схему зала"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addPlanButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "delPlanButton"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/minus.png" )
+							"margin": #Insets0
+							"toolTipText": "Удалить схему зала"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delPlanButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label23"
+							"text": "Название:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "planNameTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 5
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "savePlanButton"
+							"icon": #SwingIcon1
+							"margin": #Insets1
+							"toolTipText": "Сохранить изменения"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "savePlanButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 6
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 5
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "planDataPanel"
+						add( new FormComponent( "client.editor.component.PlanSvgPanel" ) {
+							name: "planImagePanel"
+							"cursor": new java.awt.Cursor( 12 )
+							"border": new javax.swing.border.EmptyBorder( 0, 0, 5, 0 )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "planImagePanelMouseClicked", true ) )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "Center"
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "planCatScrollPane"
+							"horizontalScrollBarPolicy": 31
+							"preferredSize": new java.awt.Dimension( 246, 75 )
+							"minimumSize": new java.awt.Dimension( 246, 75 )
+							add( new FormComponent( "org.jdesktop.swingx.JXTable" ) {
+								name: "catTable"
+								"preferredScrollableViewportSize": new java.awt.Dimension( 0, 10 )
+								"autoCreateRowSorter": false
+								"sortable": false
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "South"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 6
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0"
+						"$rowSpecs": "0"
+						"$hGap": 8
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "extraPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "org.jdesktop.swingx.JXHyperlink" ) {
+							name: "subsLabel"
+							"text": "Подписки"
+							auxiliary() {
+								"JavaCodeGenerator.postCreateCode": "${field}.setClickedColor(${field}.getUnclickedColor());"
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "subsLabelActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "org.jdesktop.swingx.JXHyperlink" ) {
+							name: "syncLabel"
+							"text": "Синх. с ВБС"
+							auxiliary() {
+								"JavaCodeGenerator.postCreateCode": "${field}.setClickedColor(${field}.getUnclickedColor());"
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "syncLabelActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 7
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0"
+					"$rowSpecs": "0, 0, 0, 0, 0, 0:1.0, 0, 0, 0"
+					"$hGap": 5
+					"$vGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "panel2"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0"
+						"$rowSpecs": "0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "kindPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label27"
+							"text": "Раздел:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.component.OperationComboBox" ) {
+							name: "kindComboBox"
+							"suggest": false
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "KindObj"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0, 0, 0, 0"
+						"$rowSpecs": "0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignTop": true
+						"$alignLeft": true
+					} ) {
+						name: "actionPanel"
+						"border": new javax.swing.border.CompoundBorder( new javax.swing.border.MatteBorder( 1, 0, 0, 0, sfield java.awt.Color black ), new javax.swing.border.EmptyBorder( 10, 0, 0, 0 ) )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "Представление:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.component.OperationComboBox" ) {
+							name: "actionComboBox"
+							"minimumSize": new java.awt.Dimension( 0, 0 )
+							"maximumRowCount": 15
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "ActionObj"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "addActionButton"
+							"icon": #SwingIcon0
+							"margin": &Insets3 new java.awt.Insets( 1, 1, 1, 1 )
+							"toolTipText": "Добавить представление"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addActionButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "delActionButton"
+							"icon": &SwingIcon2 new com.jformdesigner.model.SwingIcon( 0, "/resources/minus.png" )
+							"margin": #Insets3
+							"toolTipText": "Удалить представление"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delActionButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "saveActionButton"
+							"icon": #SwingIcon1
+							"margin": &Insets4 new java.awt.Insets( 2, 2, 2, 2 )
+							"toolTipText": "Сохранить изменения"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveActionButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+						"insets": new java.awt.Insets( 5, 0, 0, 0 )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0, 0, 50, 0, right:0:1.0, 0, 0"
+						"$rowSpecs": "0:1.0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "actionDurationPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label24"
+							"text": "Ограничение:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "actionAgeComboBox"
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "ActionObj.Age"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label7"
+							"text": "Продол-ть:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+							name: "actionDurationTextField"
+							auxiliary() {
+								"JavaCodeGenerator.customCreateCode": "new JFormattedTextField(new PositiveIntegerFormatter(525600));"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label15"
+							"text": "мин."
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+						add( new FormComponent( "javax.swing.JCheckBox" ) {
+							name: "actualActionCheckBox"
+							"text": "Актуальные"
+							"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 65536, -2, false )
+							"selected": true
+							addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "actualActionCheckBoxItemStateChanged", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 5
+						} )
+						add( new FormComponent( "javax.swing.JCheckBox" ) {
+							name: "actionLinkCheckBox"
+							"text": "Фильтр по месту"
+							"font": #SwingDerivedFont0
+							"selected": true
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "actionLinkCheckBoxItemStateChanged", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 6
+						} )
+						add( new FormComponent( "javax.swing.JCheckBox" ) {
+							name: "noVenueCheckBox"
+							"text": "Без сеансов"
+							"selected": true
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, -2, false )
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "noVenueCheckBoxItemStateChanged", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 7
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 2
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0, 0, 100, 0, 100"
+						"$rowSpecs": "0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "actionOwnerPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label26"
+							"text": "Устроитель:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "actionOwnerNameTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label31"
+							"text": "ИНН:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "actionOwnerInnTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label32"
+							"text": "Тел."
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "actionOwnerPhoneTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 5
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 3
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0, 0"
+						"$rowSpecs": "0, 0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "actionNamePanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "Краткое название:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "actionNameTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "genresButton"
+							"text": "Жанры"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, -2, false )
+							"margin": new java.awt.Insets( 0, 4, 0, 4 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "genresButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label4"
+							"text": "Полное название:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "actionFullNameTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+							"gridy": 1
+							"gridwidth": 2
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 4
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0"
+						"$rowSpecs": "0, 0, 100:1.0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "posterPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+							"$columnSpecs": "0, 0, 0, 0:1.0, 0, 0, 0, 0, 0, 0"
+							"$rowSpecs": "0"
+							"$hGap": 5
+							"$vGap": 5
+							"$alignLeft": true
+							"$alignTop": true
+						} ) {
+							name: "panel3"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "posterLabel"
+								"text": "Буклет:"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+							add( new FormComponent( "org.jdesktop.swingx.JXHyperlink" ) {
+								name: "bookletLabel"
+								auxiliary() {
+									"JavaCodeGenerator.postCreateCode": "${field}.setClickedColor(${field}.getUnclickedColor());"
+								}
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bookletLabelActionPerformed", true ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 1
+							} )
+							add( new FormComponent( "org.jdesktop.swingx.JXHyperlink" ) {
+								name: "newBookletLabel"
+								"text": "Загрузить..."
+								auxiliary() {
+									"JavaCodeGenerator.postCreateCode": "${field}.setClickedColor(${field}.getUnclickedColor());"
+								}
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newBookletLabelActionPerformed", false ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 2
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label16"
+								"text": "Рейтинг:"
+								"horizontalAlignment": 4
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 3
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "actionRatingComboBox"
+								"maximumRowCount": 11
+								auxiliary() {
+									"JavaCodeGenerator.typeParameters": "Integer"
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 4
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label25"
+								"text": "КДП:"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 5
+							} )
+							add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+								name: "kdpTextField"
+								"toolTipText": "Код доступа к представлению (не обязательно)"
+								"columns": 5
+								auxiliary() {
+									"JavaCodeGenerator.customCreateCode": "new JFormattedTextField(new PositiveIntegerFormatter());"
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 6
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label5"
+								"text": "Мин. CC:"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 7
+							} )
+							add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+								name: "chargeTextField"
+								"columns": 5
+								auxiliary() {
+									"JavaCodeGenerator.customCreateCode": "new JFormattedTextField(new PositiveNumberFormatter());"
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 8
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label14"
+								"text": "%"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 9
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridwidth": 2
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label8"
+							"text": "Заголовок:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "posterNameTextField"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+							"gridy": 1
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane1"
+							"preferredSize": new java.awt.Dimension( 22, 22 )
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "posterDescTextArea"
+								"lineWrap": true
+								"wrapStyleWord": true
+								"margin": new java.awt.Insets( 1, 3, 1, 3 )
+								"font": new com.jformdesigner.model.SwingFont( "TextField.font" )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 2
+							"gridwidth": 2
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 5
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "left:0, left:0"
+						"$rowSpecs": "top:0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "actionImagesPanel"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "client.editor.component.PosterLabel" ) {
+							name: "actionBigImageLabel"
+							"text": "<html><center>большой постер<br>640x670<br><br><small>перетащите файл<br>или<br>нажмите, чтобы выбрать</small></center></html>"
+							"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+							"horizontalAlignment": 0
+							"cursor": &Cursor0 new java.awt.Cursor( 12 )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "imageLabelMouseClicked", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.editor.component.PosterLabel" ) {
+							name: "actionSmallImageLabel"
+							"text": "<html><center>малый постер<br>320x335<br><br><small>перетащите файл<br>или<br>нажмите, чтобы выбрать</small></center></html>"
+							"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+							"horizontalAlignment": 0
+							"cursor": #Cursor0
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "imageLabelMouseClicked", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 6
+						"hAlign": 0
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "0, 0:1.0, 0, 0, 0, 0, 0"
+						"$rowSpecs": "0, 0"
+						"$hGap": 5
+						"$vGap": 5
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "actionEventPanel"
+						"border": new javax.swing.border.CompoundBorder( new javax.swing.border.MatteBorder( 1, 0, 0, 0, sfield java.awt.Color black ), new javax.swing.border.EmptyBorder( 10, 0, 0, 0 ) )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label18"
+							"text": "Сеанс:"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormComponent( "client.component.OperationComboBox" ) {
+							name: "actionEventComboBox"
+							"minimumSize": new java.awt.Dimension( 0, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.typeParameters": "ActionEventObj"
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "addActionEventButton"
+							"icon": #SwingIcon0
+							"margin": #Insets3
+							"toolTipText": "Добавить сеансы"
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addActionEventButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "delActionEventButton"
+							"icon": #SwingIcon2
+							"margin": #Insets3
+							"toolTipText": "Удалить сеанс, если нет продаж"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delActionEventButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "loadArchivalButton"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/down.png" )
+							"margin": #Insets3
+							"toolTipText": "Загрузить архивные сеансы"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "loadArchivalButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "controlActionEventButton"
+							"margin": #Insets3
+							"toolTipText": "Управление местами"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/resources/control.png" )
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "controlActionEventButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 5
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "saveActionEventButton"
+							"icon": #SwingIcon1
+							"margin": #Insets4
+							"toolTipText": "Сохранить изменения"
+							"enabled": false
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveActionEventButtonActionPerformed", false ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 6
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label17"
+							"text": "ВБС:"
+							"horizontalAlignment": 4
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+						} )
+						add( new FormComponent( "org.jdesktop.swingx.JXHyperlink" ) {
+							name: "ebsLabel"
+							"minimumSize": new java.awt.Dimension( 0, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.postCreateCode": "${field}.setClickedColor(${field}.getUnclickedColor());"
+							}
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ebsLabelActionPerformed", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+							"gridy": 1
+							"gridwidth": 6
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 7
+						"insets": new java.awt.Insets( 5, 0, 0, 0 )
+					} )
+					add( new FormContainer( "client.component.FixedTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+						name: "eventTabbedPane"
+						"tabLayoutPolicy": 1
+						"tabPlacement": 3
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+							"$columnSpecs": "0, 0, 0:1.0"
+							"$rowSpecs": "0, 0, 0, 0"
+							"$hGap": 5
+							"$vGap": 5
+							"$alignLeft": true
+							"$alignTop": true
+						} ) {
+							name: "actionEventTimePanel"
+							"border": new javax.swing.border.EmptyBorder( 0, 0, 5, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label19"
+								"text": "Начало сеанса:"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+							add( new FormComponent( "client.component.JXDateTimePicker" ) {
+								name: "showDatePicker"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 1
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane3"
+								"horizontalScrollBarPolicy": 31
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+								add( new FormComponent( "org.jdesktop.swingx.JXTable" ) {
+									name: "catPriceTable"
+									"preferredScrollableViewportSize": new java.awt.Dimension( 0, 10 )
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 2
+								"gridheight": 4
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label20"
+								"text": "Начало продаж:"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 1
+							} )
+							add( new FormComponent( "client.component.JXDateTimePicker" ) {
+								name: "sellStartDatePicker"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 1
+								"gridy": 1
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label21"
+								"text": "Конец продаж:"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 2
+							} )
+							add( new FormComponent( "client.component.JXDateTimePicker" ) {
+								name: "sellEndDatePicker"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 1
+								"gridy": 2
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+								"$columnSpecs": "0, 0:1.0"
+								"$rowSpecs": "0"
+								"$hGap": 5
+								"$vGap": 5
+								"$alignLeft": true
+								"$alignTop": true
+							} ) {
+								name: "actionEventTimePanel2"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+								add( new FormComponent( "javax.swing.JCheckBox" ) {
+									name: "sellEnabledCheckBox"
+									"text": "Продажа разрешена"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+								add( new FormComponent( "org.jdesktop.swingx.JXHyperlink" ) {
+									name: "findPlanLabel"
+									"text": "Найти схему"
+									auxiliary() {
+										"JavaCodeGenerator.postCreateCode": "${field}.setClickedColor(${field}.getUnclickedColor());"
+										"JavaCodeGenerator.variableLocal": true
+									}
+									addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "findPlanLabelActionPerformed", false ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridx": 1
+									"hAlign": 4
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 3
+								"gridwidth": 2
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Основные"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+							"$columnSpecs": "left:0, left:0, 50, 0:1.0"
+							"$rowSpecs": "0, 0, 0, 0"
+							"$hGap": 5
+							"$vGap": 5
+							"$alignLeft": true
+							"$alignTop": true
+						} ) {
+							name: "actionEventExtPanel"
+							"border": new javax.swing.border.EmptyBorder( 0, 0, 5, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableLocal": true
+							}
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "fullNameRequiredCheckBox"
+								"text": "ФИ на билете обязательны"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "eTicketsCheckBox"
+								"text": "Мобильный электронный билет"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 1
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "phoneRequiredCheckBox"
+								"text": "Номер телефона обязателен"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 1
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "longReserveCheckBox"
+								"text": "Долговременное бронирование:"
+								addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "longReserveCheckBoxItemStateChanged", true ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 1
+								"gridy": 1
+							} )
+							add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+								name: "maxReserveTimeTextField"
+								"toolTipText": "Максимальное время жизни в минутах"
+								"enabled": false
+								auxiliary() {
+									"JavaCodeGenerator.customCreateCode": "new JFormattedTextField(new PositiveIntegerFormatter());"
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 2
+								"gridy": 1
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label29"
+								"text": "мин."
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 3
+								"gridy": 1
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "ticketRefundAllowedCheckBox"
+								"text": "Возврат билета разрешен"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 2
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "vatCheckBox"
+								"text": "НДС"
+								addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "vatCheckBoxItemStateChanged", true ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 2
+								"gridx": 1
+							} )
+							add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+								name: "vatTextField"
+								"toolTipText": "НДС"
+								"enabled": false
+								auxiliary() {
+									"JavaCodeGenerator.customCreateCode": "new JFormattedTextField(new PositiveNumberFormatter());"
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 2
+								"gridx": 2
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label30"
+								"text": "%"
+								auxiliary() {
+									"JavaCodeGenerator.variableLocal": true
+								}
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 2
+								"gridx": 3
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "ticketReissueAllowedCheckBox"
+								"text": "Перепечать разрешена"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 3
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "applyEventParamsButton"
+								"text": "Применить ко всем сеансам"
+								"margin": new java.awt.Insets( 1, 5, 1, 5 )
+								"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, -1, false )
+								"enabled": false
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "applyEventParamsButtonActionPerformed", false ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridx": 1
+								"gridy": 3
+								"hAlign": 4
+								"vAlign": 3
+								"gridwidth": 3
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Расширенные"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 8
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1215, 825 )
+		} )
+	}
+}

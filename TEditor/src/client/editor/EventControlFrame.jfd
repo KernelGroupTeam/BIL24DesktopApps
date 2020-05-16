@@ -1,0 +1,226 @@
+JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_40" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$sizePolicy": 2
+			"$locationPolicy": 2
+			"defaultCloseOperation": 2
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "setIconImages(Env.frameIcons);"
+			}
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowActivated", "thisWindowActivated", false ) )
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosed", "thisWindowClosed", false ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0"
+				"$rowSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0:1.0, 0"
+				"$hGap": 10
+				"$vGap": 5
+				"$alignLeft": true
+				"$alignTop": true
+			} ) {
+				name: "leftPanel"
+				"border": new javax.swing.border.EmptyBorder( 5, 5, 5, 5 )
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "updateButton"
+					"text": "Обновить"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "catButton"
+					"text": "Категория"
+					"enabled": false
+					"toolTipText": "Изменить категорию"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "catButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+					"insets": new java.awt.Insets( 5, 0, 5, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "inaccessibleButton"
+					"text": "Недоступно"
+					"toolTipText": "Сделать места недоступными для продажи"
+					"enabled": false
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "inaccessibleButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "availableButton"
+					"text": "Доступно"
+					"toolTipText": "Вернуть места в продажу"
+					"enabled": false
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "availableButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 3
+					"insets": new java.awt.Insets( 0, 0, 5, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addQuotaButton"
+					"text": "Добавить квоту"
+					"margin": new java.awt.Insets( 2, 8, 2, 8 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addQuotaButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 4
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "returnQuotaButton"
+					"text": "Вернуть квоту"
+					"margin": new java.awt.Insets( 2, 8, 2, 8 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "returnQuotaButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 5
+					"insets": new java.awt.Insets( 0, 0, 5, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "infoEBSButton"
+					"text": "Инф. от ВБС"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "infoEBSButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 6
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "syncEBSButton"
+					"text": "Синх. с ВБС"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "syncEBSButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 7
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "ebsViewCheckBox"
+					"text": "Вид от ВБС"
+					"selected": true
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "ebsViewCheckBoxItemStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 8
+					"insets": new java.awt.Insets( 0, 0, 5, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "orderCatButton"
+					"text": "Порядок цен"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "orderCatButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 9
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "setSplButton"
+					"text": "Добавить spl"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "setSplButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 10
+				} )
+				add( new FormComponent( "org.jdesktop.swingx.JXBusyLabel" ) {
+					name: "busyLabel"
+					"horizontalAlignment": 0
+					"visible": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 11
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "splLabel"
+					"text": "SPL:"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, -1, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 12
+					"vAlign": 3
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "splitButton"
+					"text": "Схема"
+					"margin": new java.awt.Insets( 2, 8, 2, 8 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "splitButtonActionPerformed", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 13
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+			add( new FormContainer( "javax.swing.JSplitPane", new FormLayoutManager( class javax.swing.JSplitPane ) ) {
+				name: "splitPane"
+				"resizeWeight": 0.5
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "tablePanel"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "client.component.summary.JXSummaryTable" ) {
+							name: "eventSeatTable"
+							"columnControlVisible": true
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "barLabel"
+						"text": " "
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, -1, false )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "South"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "left"
+				} )
+				add( new FormComponent( "client.editor.component.PlanSvgPanel" ) {
+					name: "planPanel"
+					"border": new javax.swing.border.EmptyBorder( 5, 5, 5, 5 )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "right"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 860, 480 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "addQuotaPopupMenu"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "addManualQuotaMenuItem"
+				"text": "вручную"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addManualQuotaMenuItemActionPerformed", false ) )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "addFileQuotaMenuItem"
+				"text": "из файла"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addFileQuotaMenuItemActionPerformed", false ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 510 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "returnQuotaPopupMenu"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "returnSelectedQuotaMenuItem"
+				"text": "выделенные места"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "returnSelectedQuotaMenuItemActionPerformed", false ) )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "returnAllQuotaMenuItem"
+				"text": "все места"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "returnAllQuotaMenuItemActionPerformed", false ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 105, 510 )
+		} )
+	}
+}
