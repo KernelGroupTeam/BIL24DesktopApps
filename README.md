@@ -12,3 +12,16 @@ How to do git checkout (Intellij Idea):
 3. Click clone
 4. Then you should follow creating project instructions (click next, next…)
 5. To launch applications just run TEditor.java in TEditor/src/client.editor/ or Reporter.java in TReporter/src/client.reporter/
+
+Десктопные приложения билетной платформы BIL24 реализованы на Java и выполняются в операционных системах семейств Windows, Mac OS, Linux, Solaris.
+
+Приложение Редактор предназначено для создания событий (представлений) и внесения всей необходимой для продажи билетов информации в центральную базу данных BIL24.
+
+Приложение Отчеты предназначено для получения и анализа данных о продажах билетов, получения отчетов различных форм, возврата билетов. Приложение отображает данные в режиме реального времени.
+
+Как сделать git checkout в IntellijIdea
+1. VCS/Checkout from version control/GitHub
+2. Вставить url в 'Git Repository URL'
+3. Нажать «clone»
+4. Следовать инструкциям создания проекта 
+5. Запустите TEditor.java в TEditor/src/client.editor/ или Reporter.java в TReporter/src/client.reporter/
