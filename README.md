@@ -24,4 +24,4 @@ How to do git checkout (Intellij Idea):
 2. Вставить url в 'Git Repository URL'
 3. Нажать «clone»
 4. Следовать инструкциям создания проекта 
-5. Запустите TEditor.java в TEditor/src/client.editor/ или Reporter.java в TReporter/src/client.reporter/
+5. Запустить TEditor.java в TEditor/src/client.editor/ или Reporter.java в TReporter/src/client.reporter/
